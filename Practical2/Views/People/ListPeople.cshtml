@@ -1,0 +1,93 @@
+﻿@* Interface Enumarable = Enumarate or list (to ascertain the number of : count) *@
+
+@model IEnumerable<Practical2.Models.PersonModel>
+
+@{
+    ViewBag.Title = "List of People";
+}
+
+<h2>List of People</h2>
+
+
+<table class="table table-bordered">
+
+    <tr style="background-color: darkgreen; color: white; ">
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.StuNumber)
+        </th>
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="text-center" width="20%">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+
+        <th class="text-center" width="20%">
+            @Html.DisplayNameFor(model => model.myLink)
+        </th>
+        <th class="text-center">
+            DELETE
+        </th>
+    </tr>
+
+    @foreach (var item in Model) //For each person
+    {
+        <tr>
+            <td width="20%">
+                @Html.DisplayFor(modelItem => item.StuNumber)
+            </td>
+            <td width="20%">
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td width="20%">
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td class="text-center" width="20%">
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @*<td class="text-center" width="20%">
+                    @Html.DisplayFor(modelItem => item.myLink)
+                </td>*@
+            <td class="text-center" width="20%">
+                <a href=@Href(item.myLink) type="button" class="btn btn-success btn-sm">
+                    &nbsp;
+                    @*<span class="glyphicon glyphicon-link"></span>*@
+                    &nbsp;&nbsp;&nbsp;<strong>LINK</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+            </td>
+
+            <td>
+                <button class="btn btn-success delete"> DELETE</button>
+            </td>
+
+        </tr>
+    }
+</table>
+@section Scripts{
+    <script>
+       
+        const buttons = document.querySelectorAll(".delete");
+        buttons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+
+                button.parentNode.parentNode.remove();
+            })
+        })
+
+        const table = document.querySelector("table");
+        const rows = table.rows;
+        console.log(rows);
+        for (let i = 0; i < rows.length; i++) {
+            if (rows[i].cells[1].textContent.trim()[0] === "S") {
+                rows[i].classList.add("text-danger");
+            }
+        }
+
+
+    </script>
+    }

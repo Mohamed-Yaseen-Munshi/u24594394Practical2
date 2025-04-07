@@ -1,0 +1,91 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/myCss.css" rel="stylesheet" />
+
+    <style>
+        li{
+            list-style: none;
+        }
+        li a{
+            color: rgb(10, 10, 10);
+        }
+        body{
+            background-color: darkseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+
+        <h1 id="firstHeading">Person 1 - Name and Surname</h1>
+        <hr id="hr_header" class="bg-light text-white" style="height:2px">
+        <ul class="row bg-light menu p-3" style="font-size:20px; border-radius: 10px">
+            <li class="col p-3"><a style="text-decoration: none;" href="/Home/Index">MAIN</a></li>
+            <li class="col p-3"><a style="text-decoration: none;" href="/People/ListPeople">LIST</a></li>
+            <li class="col active p-3"><a style="text-decoration: none;" href="Person01.html">Person 01</a></li>
+            <li class="col p-3"><a style="text-decoration: none;" href="Person02.html">Person 02</a></li>
+            <li class="col p-3"><a style="text-decoration: none;" href="Person03.html">Person 03</a></li>
+            <li class="col p-3"><a style="text-decoration: none;" href="Person04.html">Person 04</a></li>
+            <li class="col p-3"><a style="text-decoration: none;" href="Person05.html">Person 05</a></li>
+            <li class="col p-3"> <a style="text-decoration: none;" href="javascript:history.back()">BACK</a></li>
+        </ul>
+        
+        <div class="row bg-light">
+            <div class="col column pt-5">
+                <h2 class="display-6">Biography and Background</h2>
+
+                <p>
+                    <img src="Images/space.png" style="float:left; width:100px; height:150px;object-fit:contain; padding: 5px" />
+                    In this paragraph you have to give the following information about the person in your study group: 1) From where, 2) the degree he/she studies and 3) the reason why he/she studies that degree.
+                    For example: Mary Alexander was born in Polokwane, and went to school in Haenertsburg.  She studies BIT(IS) with Statistics as other elective because she believes Data Science is
+                    the future.  Add a photograph of your friend.  Make sure that the photo is situated at the left of the text and does not flow into the hobbies section.
+                </p>
+                <!--Insert a photo of your friend and make sure that it aligns to the right-->
+            </div>
+            <div class="col column pt-5">
+                <h2 class="display-6">Hobbies</h2>
+
+                <p>
+                    <img src="Images/doggie.jpg" style="float:right; width:150px; height:150px;object-fit:contain" />
+                    In this paragraph you have to give a description of the hobbies of your friend.  Insert a photo related to the hobby(ies) of your friend.
+                    The photo must be situated at the right of the text.
+                </p>
+                <!--Insert a photo related to the hobby (ies) of your friend-->
+            </div>
+            <div class="col column pt-5">
+                <h2 class="display-6">Modules</h2>
+
+                <p>
+                    In this section you have to provide the first and second semester modules your friend is enrolled for - in two columns.
+                </p>
+                <table>
+                    <tr>
+                        <th>Modules Semester 1</th>
+                        <th>Modules Semester 2</th>
+                    </tr>
+                    <tr>
+                        <td>Module 11</td>
+                        <td>Module 21</td>
+                    </tr>
+                    <tr>
+                        <td>Module 12</td>
+                        <td>Module 22</td>
+                    </tr>
+                    <tr>
+                        <td>Module xx</td>
+                        <td>Module yy</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/jquery-3.7.0.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+</body>
+</html>
